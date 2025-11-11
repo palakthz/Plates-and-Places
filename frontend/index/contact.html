@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plates & Places</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <ul class="nav align-items-center gap-3 mb-0">
+                        <li><a href="home.html" class="nav-link px-2 text-primary" aria-current="page">Home</a>
+                        </li>
+                        <li><a href="about.html" class="nav-link px-2 text-primary">About</a></li>
+                        <li><a href="stories.html" class="nav-link px-2 text-primary">Food Stories</a></li>
+                        <li><a href="meals.html" class="nav-link px-2 text-primary">Meal Plans</a></li>
+                        <li><a href="shop.html" class="nav-link px-2 text-primary">Shop</a></li>
+                        <li><a href="contact.html" class="nav-link px-2 text-primary active">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- login ' sign up' n search bar-->
+                <div class="d-flex align-items-center gap-3">
+                    <form class="mb-0" role="search">
+                        <input type="search" class="form-control form-control-dark text-bg-white"
+                            placeholder="Search..." aria-label="Search">
+                    </form>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-outline-warning me-2" data-bs-toggle="modal"
+                            data-bs-target="#loginModal"><i class="bi bi-box-arrow-in-right me-2"></i> Login
+                        </button>
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                            data-bs-target="#signupModal"><i class="bi bi-person-plus-fill me-2"></i>Sign-up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- login modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">Welcome Back!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword"
+                                placeholder="Enter your password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign up modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signupModalLabel">Create Your Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="you@example.com"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Create Password</label>
+                            <input type="password" class="form-control" id="signupPassword"
+                                placeholder="Must be at least 8 characters" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signupConfirmPassword"
+                                placeholder="Re-enter your password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact us body-->
+    <!-- Full-width image section -->
+    <div class="hero-image">
+        <img src="../images/contact/contact1.png" class="img-fluid w-100" alt="Your Platform Logo">
+    </div>
+
+    <!-- Rest of the content -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <div class="text-center mb-5">
+                    <h1 class="display-5 page-title"><b>Help & Support</b></h1>
+                    <p class="lead text-muted">
+                        We're here to help! Before sending a message, please check our FAQs for a quick answer to common
+                        questions.
+                    </p>
+                </div>
+
+                <hr class="my-5">
+
+                <div class="mb-5" id="faq">
+                    <h2 class="text-center mb-4 section-title">Quick Help & FAQs</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    How do I upload a new recipe?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    To upload a recipe, log into your account and click the "Submit Recipe" button in
+                                    the top navigation bar. Follow the on-screen instructions to add your ingredients,
+                                    steps, and photos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
+                                    What are the Community Guidelines?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our Community Guidelines are designed to keep the platform safe and respectful for
+                                    everyone. This includes rules against spam, hateful content, and copyright
+                                    infringement.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree">
+                                    How do I reset my password?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    If you've forgotten your password, you can use the "Forgot Password" link on the
+                                    login page. An email with instructions to reset it will be sent to your registered
+                                    email address.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour">
+                                    Is my personal information safe?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we take privacy seriously. Your personal information is protected and will
+                                    never be shared without your consent.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive">
+                                    The site looks broken on my device, what should I do?
+
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    If you're experiencing issues, please try clearing your browser cache or using a
+                                    different browser. If the problem persists, contact our support team with details
+                                    about your device and the issue.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5">
+
+                <div class="text-center bg-light p-4 p-md-5 rounded mb-5">
+                    <h2 class="section-title mb-3">Partner With Us</h2>
+                    <p class="text-muted">Interested in advertising, brand sponsorships, or other business
+                        collaborations? Our team would love to hear from you. Please reach out to our partnerships
+                        department directly.</p>
+                    <a href="mailto:palakp455@gmail.com" class="btn btn-primary btn-lg mt-3">
+                        <i class="bi bi-briefcase-fill"></i> Business Inquiries
+                    </a>
+                </div>
+
+                <div class="card border-0">
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-4 section-title">Submit a Request</h2>
+                        <form action="[your-form-handler-url]" method="POST">
+                            <div class="row">
+                                <form action="[your-form-handler-url]" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Your Account Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Your Username (Optional)</label>
+                                        <input type="text" class="form-control" id="username" name="username"
+                                            placeholder="e.g., @ChefAnna">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Topic</label>
+                                        <select class="form-select" id="subject" name="subject" required>
+                                            <option selected disabled value="">Please select a topic...</option>
+                                            <option value="Technical Support">Technical Support (e.g., upload error, bug
+                                                report)
+                                            </option>
+                                            <option value="Account Help">Account Help (e.g., login issue, profile
+                                                settings)
+                                            </option>
+                                            <option value="Report Content">Report Content (e.g., copyright,
+                                                inappropriate photo)
+                                            </option>
+                                            <option value="Report a User">Report a User (e.g., spam, harassment)
+                                            </option>
+                                            <option value="Feedback & Suggestions">Feedback & Suggestions for the
+                                                Platform
+                                            </option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">How can we help?</label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" required
+                                            placeholder="Please provide as much detail as possible, including links to recipes or user profiles if relevant."></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Send Request</button>
+                                    </div>
+                                </form>
+
+                                <hr class="my-5">
+
+                                <div class="text-center">
+                                    <h2 class="section-title mb-3">Join the Community</h2>
+                                    <p class="text-muted mb-4">Follow us for feature updates, contests, and the best
+                                        recipes from the
+                                        community!</p>
+                                    <a href="https://www.linkedin.com/in/palak-priya-649590322/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                                    <a href="https://github.com/palakthz" class="social-icon"><i class="bi bi-github"></i></a>
+                                    <a href="https://www.instagram.com/palakthz/" class="social-icon"><i class="bi bi-instagram"></i></a>
+                                </div>
+
+                            </div>
+                    </div>
+                </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    
+    <!-- API Integration Scripts -->
+    <script src="../js/api-config.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/newsletter.js"></script>
+</body>
+
+</html>

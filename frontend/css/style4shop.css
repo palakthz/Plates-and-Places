@@ -1,0 +1,404 @@
+/* --- 1. SETUP & VARIABLES --- */
+:root {
+    --primary-font: 'Lato', sans-serif;
+    --heading-font: 'Playfair Display', serif;
+    --accent-color: #D35400;
+    /* A warm, earthy terracotta/rust */
+    --accent-color-dark: #A04000;
+    /* For hover states */
+    --text-color: #2C3E50;
+    --body-bg: #FDFEFE;
+    --section-bg: #F8F9F9;
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 2. GENERAL STYLES --- */
+body {
+    font-family: var(--primary-font);
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h5 {
+    font-family: var(--heading-font);
+}
+
+p {
+    max-width: 65ch;
+    /* Improves readability */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+section {
+    padding: 60px 20px;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--section-bg);
+}
+
+/* --- 3. HEADER & SECTION HEADERS --- */
+.shop-header,
+.kits-section>h2,
+.kits-section>p,
+.product-grid-section>h2,
+.product-grid-section>p {
+    text-align: center;
+}
+
+.shop-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.shop-header p {
+    font-size: 1.1rem;
+    color: #5D6D7E;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+section>p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #5D6D7E;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* --- 4. FEATURED PICK SECTION --- */
+.featured-pick {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.featured-pick-image,
+.featured-pick-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.featured-pick-image img {
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    
+}
+
+.featured-pick-image img:hover {
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.featured-pick-details span {
+    font-weight: bold;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-pick-details h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+/* --- 5. CALL-TO-ACTION BUTTONS --- */
+.cta-button,
+.cta-button-secondary,
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-size: 1rem;
+}
+
+.cta-button,
+.btn-primary {
+    /* Solid primary button */
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.cta-button:hover,
+.btn-primary:hover {
+    background-color: var(--accent-color-dark);
+    border-color: var(--accent-color-dark);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.cta-button-secondary {
+    /* Outline secondary button */
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- 6. KITS & PRODUCTS GRID --- */
+.kit-grid,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.kit-card,
+.product-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.kit-card:hover,
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.kit-card img,
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.kit-card h3,
+.kit-card p,
+.kit-card a {
+    padding: 0 20px;
+}
+
+.kit-card h3 {
+    margin-top: 20px;
+}
+
+.kit-card p {
+    flex-grow: 1;
+    /* Pushes button to bottom */
+    color: #5D6D7E;
+}
+
+.kit-card a {
+    margin: 20px auto;
+}
+
+.product-card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: var(--text-color);
+}
+
+.product-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.product-info p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #5D6D7E;
+}
+
+/* --- 7. FOOTER STYLES --- */
+/* Basic styling to make the provided footer code work without full Bootstrap CSS */
+.footer {
+    background-color: var(--section-bg);
+    color: #5D6D7E;
+    padding: 50px 20px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .col-6,
+.footer .col-md-3,
+.footer .col-md-2,
+.footer .col-md-5 {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h5 {
+    color: var(--text-color);
+}
+
+.footer .nav-link {
+    padding: 0.2rem 0;
+    color: #5D6D7E;
+    transition: color 0.2s;
+}
+
+.footer .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer .d-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.footer .border-top {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+/* --- nav bar tweaks --- */
+.nav-link {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+    /* Changes color to Bootstrap warning */
+    transform: translateY(-3px);
+    /* Moves link up slightly */
+    text-decoration: underline;
+}
+
+/* Nav link motion + active pill */
+.nav .nav-link {
+    transition: color .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease;
+    border-radius: .375rem;
+    padding: .25rem .5rem;
+    /* baseline padding, active will expand */
+}
+
+/* Hover motion for non-active links */
+.nav .nav-link:not(.active):hover {
+    color: #ffc107 !important;
+    /* accent on hover */
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Blue pill for the active page */
+.nav .nav-link.active {
+    background: linear-gradient(180deg, #0d6efd, #0b5ed7);
+    color: #fff !important;
+    padding: .45rem .9rem;
+    /* make the pill bigger */
+    border-radius: .5rem;
+    box-shadow: 0 6px 18px rgba(13, 110, 253, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Keep search input visually consistent on dark header */
+.form-control-dark.text-bg-dark {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#logo {
+    font-family: 'sans-serif', italic;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #ffdd57;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+
+}
+
+#logo:hover {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+/* Center the brand while keeping nav left and controls right */
+header .container {
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+}
+
+/* Ensure nav stays left-aligned */
+.nav {
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    list-style: none;
+}

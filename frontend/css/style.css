@@ -1,0 +1,278 @@
+.nav-link {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+    /* Changes color to Bootstrap warning */
+    transform: translateY(-3px);
+    /* Moves link up slightly */
+    text-decoration: underline;
+}
+
+/* Nav link motion + active pill */
+.nav .nav-link {
+    transition: color .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease;
+    border-radius: .375rem;
+    padding: .25rem .5rem;
+    /* baseline padding, active will expand */
+}
+
+/* Hover motion for non-active links */
+.nav .nav-link:not(.active):hover {
+    color: #ffc107 !important;
+    /* accent on hover */
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Blue pill for the active page */
+.nav .nav-link.active {
+    background: linear-gradient(180deg, #0d6efd, #0b5ed7);
+    color: #fff !important;
+    padding: .45rem .9rem;
+    /* make the pill bigger */
+    border-radius: .5rem;
+    box-shadow: 0 6px 18px rgba(13, 110, 253, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Keep search input visually consistent on dark header */
+.form-control-dark.text-bg-dark {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#logo {
+    font-family: 'sans-serif', italic;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #ffdd57;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+
+}
+
+#logo:hover {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+/* Center the brand while keeping nav left and controls right */
+header .container {
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+}
+
+/* Ensure nav stays left-aligned */
+.nav {
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    list-style: none;
+}
+
+/* On small screens, stack and show brand left */
+@media (max-width: 767.98px) {
+    #logo {
+        position: static;
+        transform: none;
+        margin-left: .5rem;
+    }
+
+    .nav {
+        overflow-x: auto;
+    }
+}
+.carousel-item img {
+  height: 650px;   /* or any px value */
+  object-fit: cover;  /* crop nicely instead of squishing */
+}
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.35); /* adjust darkness */
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2; /* keep text above overlay */
+}
+/* This is the key for the smooth animation */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* This is what happens when you hover */
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/*
+ * Custom CSS for Feature Cards
+ */
+
+.feature-card {
+    /* Optional: Remove the default card border */
+    border: none;
+    
+    /* This makes the hover effect smooth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    /* Lifts the card up by 10px */
+    transform: translateY(-10px);
+    
+    /* Adds a more pronounced shadow to enhance the "lifted" effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Card styling */
+.feature-card {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Headings */
+.feature-card h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #1e40af; /* primary blue (tailored to your site) */
+  margin-bottom: 0.5rem;
+}
+
+.feature-card h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #6b7280; /* softer gray */
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraph text */
+.feature-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Italic inside paragraph (like Plates & Places) */
+.feature-card p i {
+  font-style: italic;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .feature-card h1 {
+    font-size: 2rem;
+  }
+  .feature-card h5 {
+    font-size: 1rem;
+  }
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Import Google Fonts (if you linked them in the HTML) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* A neutral light gray for a more 'platform' feel */
+    color: #4a4a4a;
+}
+
+/* Custom Primary Button Color */
+.btn-primary {
+    background-color: #e67e22; /* Your platform's primary brand color */
+    border-color: #e67e22;
+    padding: 12px 28px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d35400; /* A darker shade on hover */
+    border-color: #d35400;
+    transform: translateY(-2px);
+}
+
+/* Form Styling */
+.form-control:focus, .form-select:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 0.25rem rgba(230, 126, 34, 0.25);
+}
+
+/* Accordion (FAQ) Customization */
+.accordion-button {
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: #e67e22;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(230, 126, 34, 0.25);
+}
+
+/* Social Icons */
+.social-icon {
+    font-size: 2rem; /* 32px */
+    margin: 0 15px;
+    color: #4a4a4a;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Partnership Section */
+.bg-light {
+    background-color: #ffffff !important; /* Clean white background */
+    border: 1px solid #eee;
+}
+
+/* Horizontal Rule */
+hr {
+    opacity: 0.15;
+}
+
+.hero-image img {
+  height: 60vh;        /* 70% of screen height */
+  object-fit: cover;
+}
+
+.dropdown-item.active {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
