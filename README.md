@@ -1,4 +1,4 @@
-#🍽️ Plates & Places
+# Plates & Places
 
 **Plates & Places** is a simple, elegant web-based project that showcases beautiful dishes and the places they come from.  
 Originally built with a backend, this version focuses **only on the frontend**, made with **HTML, Bootstrap, CSS, and JavaScript**.
