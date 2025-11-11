@@ -25,21 +25,7 @@ Originally built with a backend, this version focuses **only on the frontend**, 
 
 ---
 
-## 📂 Project Structure
 
-
-
-Plates-and-Places/
-│
-├── index.html
-├── /assets
-│ ├── images/
-│ └── icons/
-├── /css
-│ └── style.css
-├── /js
-│ └── script.js
-└── README.md
 
 
 ---
